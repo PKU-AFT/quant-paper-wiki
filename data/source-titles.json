@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "title": "AlphaAgent: LLM-Driven Alpha Mining with Regularized Exploration to Counteract Alpha Decay"
+  },
+  {
+    "id": 2,
+    "title": "R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization"
+  },
+  {
+    "id": 3,
+    "title": "Navigating the Alpha Jungle: An LLM-Powered MCTS Framework for Formulaic Factor Mining"
+  },
+  {
+    "id": 4,
+    "title": "AlphaPROBE: Alpha Mining via Principled Retrieval and On-graph Biased Evolution"
+  },
+  {
+    "id": 5,
+    "title": "QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining"
+  },
+  {
+    "id": 6,
+    "title": "Progressive Dependency Representation Learning for Stock Ranking in Uncertain Risk Contrasting"
+  },
+  {
+    "id": 7,
+    "title": "RSAP-DFM: Regime-Shifting Adaptive Posterior Dynamic Factor Model for Stock Returns Prediction"
+  },
+  {
+    "id": 8,
+    "title": "Automatic De-Biased Temporal-Relational Modeling for Stock Investment Recommendation"
+  },
+  {
+    "id": 9,
+    "title": "FactorVAE: A Probabilistic Dynamic Factor Model Based on Variational Autoencoder for Predicting Cross-Sectional Stock Returns"
+  },
+  {
+    "id": 10,
+    "title": "FactorGCL: A Hypergraph-Based Factor Model with Temporal Residual Contrastive Learning for Stock Returns Prediction"
+  },
+  {
+    "id": 11,
+    "title": "DeepLOB: Deep Convolutional Neural Networks for Limit Order Books"
+  },
+  {
+    "id": 12,
+    "title": "HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information"
+  },
+  {
+    "id": 13,
+    "title": "The Label Horizon Paradox: Rethinking Supervision Targets in Financial Forecasting"
+  },
+  {
+    "id": 14,
+    "title": "ArchetypeTrader: Reinforcement Learning for Selecting and Refining Learnable Strategic Archetypes in Quantitative Trading"
+  },
+  {
+    "id": 15,
+    "title": "StockMixer: A Simple yet Strong MLP-based Architecture for Stock Price Forecasting"
+  },
+  {
+    "id": 16,
+    "title": "RAVEN: A Regime-Aware Variable-context Expert Network for Financial Time Series Forecasting"
+  },
+  {
+    "id": 17,
+    "title": "DoubleAdapt: A Meta-learning Approach to Incremental Learning for Stock Trend Forecasting"
+  },
+  {
+    "id": 18,
+    "title": "DDG-DA: Data Distribution Generation for Predictable Concept Drift Adaptation"
+  },
+  {
+    "id": 19,
+    "title": "Fast and Slow Streams for Online Time Series Forecasting Without Information Leakage"
+  },
+  {
+    "id": 20,
+    "title": "Regime-Adaptive Continual Learning for Portfolio Management"
+  },
+  {
+    "id": 21,
+    "title": "Deep Risk Model: A Deep Learning Solution for Mining Latent Risk Factors to Improve Covariance Matrix Estimation"
+  },
+  {
+    "id": 22,
+    "title": "Reinforcement Learning with Maskable Stock Representation for Portfolio Management in Customizable Stock Pools"
+  },
+  {
+    "id": 23,
+    "title": "Multi-task Recurrent Neural Networks and Higher-order Markov Random Fields for Stock Price Movement Prediction"
+  },
+  {
+    "id": 24,
+    "title": "MILLION: A General Multi-Objective Framework with Controllable Risk for Portfolio Management"
+  },
+  {
+    "id": 25,
+    "title": "Deep Inception Networks: A General End-to-End Framework for Multi-asset Quantitative Strategies"
+  },
+  {
+    "id": 26,
+    "title": "Spatio-Temporal Momentum: Jointly Learning Time-Series and Cross-Sectional Strategies"
+  },
+  {
+    "id": 27,
+    "title": "Forest through the Trees: Building Cross-Sections of Stock Returns"
+  },
+  {
+    "id": 28,
+    "title": "Alpha Go Everywhere: Machine Learning and International Stock Returns"
+  },
+  {
+    "id": 29,
+    "title": "Tail-GAN: Learning to Simulate Tail Risk Scenarios"
+  },
+  {
+    "id": 30,
+    "title": "Graph-Based Methods for Forecasting Realized Covariances"
+  },
+  {
+    "id": 31,
+    "title": "Forecasting Realized Volatility with Spillover Effects: Perspectives from Graph Neural Networks"
+  },
+  {
+    "id": 32,
+    "title": "Volatility Forecasting with Machine Learning and Intraday Commonality"
+  },
+  {
+    "id": 33,
+    "title": "Cross-Impact of Order Flow Imbalance in Equity Markets"
+  },
+  {
+    "id": 34,
+    "title": "Detecting Lead-Lag Relationships in Stock Returns and Portfolio Strategies"
+  },
+  {
+    "id": 35,
+    "title": "Deep Kalman Filters Can Filter"
+  },
+  {
+    "id": 36,
+    "title": "Trading Volume Alpha"
+  },
+  {
+    "id": 37,
+    "title": "Enhancing Time Series Momentum Strategies Using Deep Neural Networks"
+  }
+]

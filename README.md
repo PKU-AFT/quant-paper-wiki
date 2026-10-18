@@ -2,9 +2,9 @@
 
 从读懂问题，到建立基线，再到可以核查的复现实验。
 
-首版收录 **37 篇论文 · 7 个研究方向 · 17 个配套代码入口**，保留原清单编号。覆盖因子挖掘、收益预测、在线适应、组合构建、风险管理和交易执行。
+当前收录 **37 篇论文 · 7 个研究方向 · 17 个配套代码入口**，保留原清单编号。覆盖因子挖掘、收益预测、在线适应、组合构建、风险管理和交易执行。
 
-**[按方向阅读](wiki/Home.md) · [37 篇完整目录](wiki/All-Papers.md) · [阅读与复现路线](wiki/Reading-Paths.md) · [复现记录规范](wiki/Reproduction-Guide.md) · [参与维护](CONTRIBUTING.md)**
+**[在线 Wiki](https://github.com/PKU-AFT/quant-paper-wiki/wiki) · [按方向阅读](wiki/Home.md) · [37 篇完整目录](wiki/All-Papers.md) · [阅读与复现路线](wiki/Reading-Paths.md) · [复现记录规范](wiki/Reproduction-Guide.md) · [参与维护](CONTRIBUTING.md)**
 
 首次整理：2026-10-18。卡片是简要导读，原文入口与题录已核对；**独立训练及回测尚未开展**。代码入口中的演示实现不等同于原论文完整复现。
 

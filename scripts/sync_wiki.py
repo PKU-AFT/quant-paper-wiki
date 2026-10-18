@@ -34,6 +34,11 @@ subprocess.run(['git','-C',str(checkout),'add','--',*[p.name for p in pages]],ch
 if not run('git','-C',str(checkout),'diff','--cached','--name-only').strip():
     print('Wiki already matches the repository sources.')
 elif args.push:
+    # Reuse the repository-local author identity, without changing global Git settings.
+    for key in ('user.name','user.email'):
+        value=run('git','-C',str(ROOT),'config','--get',key).strip()
+        assert value, f'Missing {key}; configure an author identity in the source repository'
+        run('git','-C',str(checkout),'config',key,value)
     subprocess.run(['git','-C',str(checkout),'commit','-m','docs: sync quantitative paper navigation'],check=True)
     subprocess.run(['git','-C',str(checkout),'push','origin','HEAD'],check=True)
     print(f'Published {len(pages)} generated Wiki pages.')

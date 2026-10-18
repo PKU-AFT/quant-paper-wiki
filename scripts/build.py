@@ -31,13 +31,13 @@ def write(path, text):
     path.write_text(text.strip()+'\n')
 
 
-intro='''# PKU-AFT · 量化研究论文导航
+intro=f'''# PKU-AFT · 量化研究论文导航
 
 从读懂问题，到建立基线，再到可以核查的复现实验。
 
-首版收录 **37 篇论文 · 7 个研究方向 · 17 个配套代码入口**，保留原清单编号。覆盖因子挖掘、收益预测、在线适应、组合构建、风险管理和交易执行。
+当前收录 **{len(PAPERS)} 篇论文 · {len(GROUPS)} 个研究方向 · {sum(bool(p['code_url']) for p in PAPERS)} 个配套代码入口**，保留原清单编号。覆盖因子挖掘、收益预测、在线适应、组合构建、风险管理和交易执行。
 
-**[按方向阅读](wiki/Home.md) · [37 篇完整目录](wiki/All-Papers.md) · [阅读与复现路线](wiki/Reading-Paths.md) · [复现记录规范](wiki/Reproduction-Guide.md) · [参与维护](CONTRIBUTING.md)**
+**[在线 Wiki](https://github.com/PKU-AFT/quant-paper-wiki/wiki) · [按方向阅读](wiki/Home.md) · [{len(PAPERS)} 篇完整目录](wiki/All-Papers.md) · [阅读与复现路线](wiki/Reading-Paths.md) · [复现记录规范](wiki/Reproduction-Guide.md) · [参与维护](CONTRIBUTING.md)**
 
 首次整理：2026-10-18。卡片是简要导读，原文入口与题录已核对；**独立训练及回测尚未开展**。代码入口中的演示实现不等同于原论文完整复现。
 
@@ -73,11 +73,11 @@ readme+='''¹ 年份对应本导航所链接的首发预印本或会议、期刊
 '''
 write(ROOT/'README.md',readme)
 
-home='''# 量化研究论文导航
+home=f'''# 量化研究论文导航
 
 欢迎来到 PKU-AFT 的论文阅读与复现 Wiki。
 
-这里从 **37 篇论文**出发，把研究问题、原文入口、配套代码与实验建议放在同一张阅读卡片中。
+这里从 **{len(PAPERS)} 篇论文**出发，把研究问题、原文入口、配套代码与实验建议放在同一张阅读卡片中。
 
 **[完整目录](All-Papers.md) · [阅读路线](Reading-Paths.md) · [复现规范](Reproduction-Guide.md) · [来源与状态](Sources-and-Status.md)**
 
@@ -95,7 +95,7 @@ home+='''## 推荐起点
 当前仅完成导航与初步导读整理，所有独立复现实验均为“未开展”。
 '''
 write(ROOT/'wiki/Home.md',home)
-all_papers='# 全部论文 · 原清单顺序\n\n[返回首页](Home.md) · [阅读路线](Reading-Paths.md)\n\n保留原清单 01–37 编号；点击论文名称打开独立阅读卡片。\n\n'+table(PAPERS)+'\n\n¹ 年份口径与版本说明见 [来源与状态](Sources-and-Status.md)。'
+all_papers='# 全部论文 · 原清单顺序\n\n[返回首页](Home.md) · [阅读路线](Reading-Paths.md)\n\n保留原清单 01–37 编号；后续论文按新编号追加。点击论文名称打开独立阅读卡片。\n\n'+table(PAPERS)+'\n\n¹ 年份口径与版本说明见 [来源与状态](Sources-and-Status.md)。'
 write(ROOT/'wiki/All-Papers.md',all_papers)
 for g in GROUPS:
     content=f"# {g['name']}\n\n[返回首页](Home.md) · [完整目录](All-Papers.md)\n\n{g['description']}\n\n"
@@ -145,9 +145,9 @@ for p in PAPERS:
 '''
     write(ROOT/'wiki'/filename(p),text)
 
-sidebar='# 导航\n\n[首页](Home.md)\n\n[全部 37 篇](All-Papers.md)\n\n[阅读路线](Reading-Paths.md)\n\n[复现规范](Reproduction-Guide.md)\n\n'
+sidebar=f'# 导航\n\n[首页](Home.md)\n\n[全部 {len(PAPERS)} 篇](All-Papers.md)\n\n[阅读路线](Reading-Paths.md)\n\n[复现规范](Reproduction-Guide.md)\n\n'
 sidebar+='\n\n'.join(f"[{g['name']}](Category-{g['id']}.md)" for g in GROUPS)
 sidebar+='\n\n[来源与状态](Sources-and-Status.md)'
 write(ROOT/'wiki/_Sidebar.md',sidebar)
-write(ROOT/'wiki/_Footer.md','PKU-AFT · 量化研究论文导航 · 首版 2026-10-18 · [来源与状态](Sources-and-Status.md)')
+write(ROOT/'wiki/_Footer.md','PKU-AFT · 量化研究论文导航 · [仓库与贡献](https://github.com/PKU-AFT/quant-paper-wiki) · [来源与状态](Sources-and-Status.md)')
 print(f'Built {len(PAPERS)} paper cards and {len(GROUPS)} category pages.')

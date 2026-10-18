@@ -19,7 +19,7 @@ for p in source:
 group_ids={g['id'] for g in groups}
 for p in papers:
     assert p['category'] in group_ids
-    assert p['reproduction_status'] in ('未开展','环境检查','方法演示','论文复现')
+    assert p['reproduction_status'] in ('Not started','Environment check','Method demonstration','Paper reproduction')
     for key in ['title','summary','reading_focus','first_experiment','last_checked']:
         assert p[key].strip(), (p['id'],key)
     urls=[p['primary_url']]+([p['code_url']] if p['code_url'] else [])

@@ -1,24 +1,31 @@
-# 参与维护
+# Contributing
 
-欢迎补充论文、阅读笔记与可核查的复现实验。
+Contribute papers, source corrections, reading notes and reproducible experiments.
 
-## 新增或修改论文
+| Contribution | Include |
+| --- | --- |
+| New paper | Full title, primary source, research area and reason for inclusion |
+| Code link | Identify author code, a demonstration or a third-party implementation |
+| Reading note | Cite relevant pages, sections or equations |
+| Experiment | Follow the [experimental protocol](wiki/Reproduction-Guide.md), including deviations and failed runs |
 
-1. 先通过 Issue 提供完整题目、原文入口、研究方向与推荐理由。代码链接请说明是作者实现、演示还是第三方复现。
-2. 编辑 `data/papers.json`；已有编号保持不变，新论文按下一编号追加。`data/source-titles.json` 保留首批 37 篇的原清单顺序。
-3. 使用 Python 3.11 或更新版本运行：
+## Update the catalog
 
-   ```sh
-   python3 scripts/build.py
-   python3 scripts/check.py
-   ```
+1. Edit [data/papers.json](data/papers.json). Preserve existing IDs and append new entries with the next available ID. [data/source-titles.json](data/source-titles.json) preserves the initial 37-paper list.
+2. Keep the primary fields in English. Chinese source descriptions are retained in fields ending in _zh.
+3. With Python 3.11 or newer, run:
 
-4. 将数据与生成的 Markdown 一起提交 Pull Request。不要直接修改生成的论文卡片；阅读笔记可新增独立页面，并从相应卡片关联。
+       python3 scripts/build.py
+       python3 scripts/check.py
 
-## 阅读笔记与实验
+4. Submit the catalog and generated Markdown together in a pull request. Update generated cards through the catalog; keep longer reading notes in separate linked pages.
 
-方法与结论注明原文位置。实验附上 [复现规范](wiki/Reproduction-Guide.md) 中的字段，说明是环境检查、方法演示还是论文实验。请不要上传数据凭据、未获分享授权的数据或论文全文。
+Do not upload credentials, data without sharing permission or full paper copies.
 
-## 发布 GitHub Wiki
+## Publish the GitHub Wiki
 
-主仓库保存可审阅的 Markdown 来源。维护者更新后运行 `python3 scripts/sync_wiki.py --push` 同步到 GitHub Wiki；这需要当前 `gh` 账号拥有目标仓库的写权限，并已在网页创建 Wiki 首页。该命令只更新本导航生成的同名页面，保留其他 Wiki 页面。
+Maintainers can run the command below after reviewing repository changes:
+
+    python3 scripts/sync_wiki.py --push
+
+The current gh account needs write access, and the Wiki must have an initial page. The script updates matching generated pages and preserves unrelated Wiki pages.

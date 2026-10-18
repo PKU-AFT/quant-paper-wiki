@@ -1,33 +1,20 @@
 # 33 · Cross-Impact of OFI
 
-[返回首页](Home.md) · [微观结构与交易执行](Category-microstructure.md) · [全部论文](All-Papers.md)
+[Home](Home.md) · [Full index](All-Papers.md)
 
 **Cross-Impact of Order Flow Imbalance in Equity Markets**
 
-| 项目 | 内容 |
+| Item | Details |
 | --- | --- |
-| 研究方向 | 微观结构与交易执行 |
-| 所链接版本年份 | 2021，以原文页面的版本信息为准 |
-| 原文入口 | [论文页面](https://arxiv.org/abs/2112.13213) |
-| 配套代码 | 尚未核实作者代码入口；不表示没有公开代码 |
-| 首版整理状态 | 题录与原文入口已核对；本页为简要导读 |
-| 独立复现状态 | 未开展 |
-| 最近核对 | 2026-10-18 |
+| Research area | [Microstructure & Execution](Category-microstructure.md) |
+| Linked version year | 2021 |
+| Paper | [Primary source](https://arxiv.org/abs/2112.13213) |
+| Code | Author code link not yet verified |
+| Method | Combines multi-level order-flow imbalance and separates own impact, contemporaneous cross-impact and lagged prediction. |
+| Reading focus | Evaluate contemporaneous explanation and future prediction separately. Predictive effects may decay rapidly with latency. |
+| Experiment idea | Start with linear and sparse models; report contemporaneous fits and strictly lagged predictions separately. |
+| Source check | Bibliographic entry and primary link checked |
+| Independent reproduction | Not started |
+| Last source check | 2026-10-18 |
 
-## 研究什么
-
-整合多档盘口 OFI，区分自身冲击、跨股票同期解释和滞后预测。
-
-## 阅读时关注什么
-
-同期解释和未来预测必须分开评估；加入时延后信号可能迅速衰减。
-
-## 第一个实验可以怎么做
-
-先做线性与稀疏模型，分别报告同期拟合和严格滞后的预测结果。
-
-这是一项待开展的实验建议。运行前请先确定 [数据与评估协议](Reproduction-Guide.md)；完成后附上代码版本、数据范围、命令和结果。
-
-## 后续阅读记录
-
-当前尚无本仓库独立实验记录。后续笔记应注明原文页码或章节；复现记录应说明完成的是环境检查、方法演示还是论文实验。
+[Experimental protocol](Reproduction-Guide.md) · [Sources & versions](Sources-and-Status.md)

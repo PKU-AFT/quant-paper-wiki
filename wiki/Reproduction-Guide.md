@@ -1,46 +1,43 @@
-# 复现记录规范
+# Experimental Protocol
 
-[返回首页](Home.md) · [阅读路线](Reading-Paths.md)
+[Home](Home.md) · [Reading paths](Reading-Paths.md)
 
-一个结果需要能说明：用了什么信息、如何训练、如何评估，以及别人如何再次得到它。
+## Experiment specification
 
-## 先固定实验条件
-
-| 内容 | 需要记录的字段 |
+| Item | Required record |
 | --- | --- |
-| 版本 | 论文版本、代码 commit、补丁、依赖与随机种子 |
-| 数据 | 来源、授权条件、时间范围、股票池与历史成员、特征和标签定义 |
-| 信息可用时间 | 特征可见时间、标签完成时间、预测时间、参数更新时间 |
-| 切分 | 训练、验证、最终测试区间；标签跨越边界时如何处理 |
-| 交易 | 调仓时点、成交价、停牌与涨跌停、做空和持仓限制、手续费与冲击 |
-| 搜索预算 | 候选评估次数、LLM 后端、token 或费用、调参预算、停止规则 |
-| 结果 | IC/RankIC、收益与风险、换手、扣费后表现、年度稳定性、运行成本 |
+| Version | Paper version, code commit, patches, dependencies and random seeds |
+| Data | Source, access conditions, date range, historical universe, features and label definitions |
+| Information timing | Feature availability, label maturity, prediction time and parameter-update time |
+| Splits | Training, validation and final test periods; treatment of labels crossing split boundaries |
+| Trading assumptions | Rebalancing time, fill prices, suspensions, price limits, shorting/position constraints, fees and impact |
+| Search budget | Candidate evaluations, LLM backend, token/currency costs, tuning budget and stopping rule |
+| Results | IC/RankIC, returns and risk, turnover, net performance, annual stability and runtime costs |
 
-只有训练与验证可以用于模型和搜索决策。最终测试集在方案冻结后评估；如果结果影响了下一轮选择，该区间应重新归类为验证区间。
+Use training and validation data for model selection and search decisions. Evaluate the final test period after freezing the design. If its results guide another decision, treat that period as validation.
 
-## 区分完成的层级
+## Evidence levels
 
-| 状态 | 需要的证据 |
+| Status | Evidence required |
 | --- | --- |
-| 未开展 | 仅有导航、阅读或实验计划 |
-| 环境检查 | 依赖可安装、入口可运行，附命令与日志 |
-| 方法演示 | 在模拟数据或替代数据上实现核心思想，明确与原文的差异 |
-| 论文复现 | 固定论文实验设置，报告匹配项、差异、结果与失败项 |
+| Not started | Navigation, reading or an experiment plan only |
+| Environment check | Dependencies install and an entry point runs; include commands and logs |
+| Method demonstration | Core idea runs on synthetic or substitute data; explain differences from the paper |
+| Paper reproduction | Match the paper's experimental conditions and report matches, deviations, results and failures |
 
-代码开源不代表原实验数据可得，程序跑通也不代表收益结论成立。
+Public code does not establish access to the original data. A successful run does not independently validate a return claim.
 
-## 一份最小实验记录
+## Minimum experiment record
 
-```text
-论文编号与版本：
-实验问题与简单基线：
-代码 commit 与环境：
-数据来源、区间、股票池和信息可用时间：
-训练 / 验证 / 最终测试切分：
-交易与成本假设：
-运行命令、随机种子和搜索预算：
-结果文件与日志：
-与论文的差异、失败项及结论范围：
-```
+| Field | Details to supply |
+| --- | --- |
+| Paper | Catalog ID and paper version |
+| Question | Hypothesis and simple baseline |
+| Implementation | Code commit, environment and patches |
+| Data | Source, period, universe and information availability |
+| Evaluation | Train/validation/test splits and trading/cost assumptions |
+| Execution | Commands, seeds and search budget |
+| Artifacts | Result files and logs |
+| Interpretation | Differences from the paper, failures and the scope of the conclusion |
 
-阅读笔记应引用原文页码、章节或公式编号。实验记录应保留失败和负结果，以便后续判断改进来自哪里。
+Reading notes should cite pages, sections or equations. Preserve failures and negative results alongside successful runs.

@@ -1,37 +1,26 @@
 # 35 · Deep Kalman Filters Can Filter
 
-[返回首页](Home.md) · [风险、协方差与状态估计](Category-risk-modeling.md) · [全部论文](All-Papers.md)
+[Home](Home.md) · [Full index](All-Papers.md)
 
 **Deep Kalman Filters Can Filter**
 
-| 项目 | 内容 |
+| Item | Details |
 | --- | --- |
-| 研究方向 | 风险、协方差与状态估计 |
-| 所链接版本年份 | 2023，以原文页面的版本信息为准 |
-| 原文入口 | [论文页面](https://arxiv.org/abs/2310.19603v1) |
-| 配套代码 | 尚未核实作者代码入口；不表示没有公开代码 |
-| 首版整理状态 | 题录与原文入口已核对；本页为简要导读 |
-| 独立复现状态 | 未开展 |
-| 最近核对 | 2026-10-18 |
+| Research area | [Risk, Covariance & Filtering](Category-risk-modeling.md) |
+| Linked version year | 2023 |
+| Paper | [Primary source](https://arxiv.org/abs/2310.19603v1) |
+| Code | Author code link not yet verified |
+| Method | Studies the theoretical ability of continuous-time deep filters to approximate conditional distributions. |
+| Reading focus | The listed title refers to v1. Version v5 has a different title and Transformer-based formulation; fix the version when reading and citing. |
+| Experiment idea | Identify the latent state, observation process, conditional Gaussian assumptions and approximation error definition. |
+| Source check | Bibliographic entry and primary link checked |
+| Independent reproduction | Not started |
+| Last source check | 2026-10-18 |
 
-## 研究什么
+## Additional sources & versions
 
-研究连续时间深度滤波模型逼近条件分布的理论能力。
+| Source | Link |
+| --- | --- |
+| Version v5 with a revised title | [Open](https://arxiv.org/abs/2310.19603v5) |
 
-## 阅读时关注什么
-
-本清单标题对应 v1；新版 v5 已改题为 Transformer 连续时间滤波理论，阅读和引用时要固定版本。
-
-## 第一个实验可以怎么做
-
-先明确隐藏状态、观测过程、条件高斯假设与近似误差定义。
-
-这是一项待开展的实验建议。运行前请先确定 [数据与评估协议](Reproduction-Guide.md)；完成后附上代码版本、数据范围、命令和结果。
-
-## 补充来源与版本
-
-- [新版 v5，题目已改变](https://arxiv.org/abs/2310.19603v5)
-
-## 后续阅读记录
-
-当前尚无本仓库独立实验记录。后续笔记应注明原文页码或章节；复现记录应说明完成的是环境检查、方法演示还是论文实验。
+[Experimental protocol](Reproduction-Guide.md) · [Sources & versions](Sources-and-Status.md)

@@ -1,37 +1,51 @@
 [
   {
     "id": "alpha-agents",
-    "name": "因子挖掘与研究 Agent",
-    "description": "从假设生成、搜索分配到因子谱系，比较自动化研究流程。"
+    "name": "Factor Mining & Research Agents",
+    "description": "Hypothesis generation, search allocation and evolutionary research workflows.",
+    "name_zh": "因子挖掘与研究 Agent",
+    "description_zh": "从假设生成、搜索分配到因子谱系，比较自动化研究流程。"
   },
   {
     "id": "return-prediction",
-    "name": "收益预测与监督设计",
-    "description": "从简单基线、标签期限到关系和潜在因子建模。"
+    "name": "Return Prediction & Supervision",
+    "description": "Simple baselines, label horizons, relational models and latent factors.",
+    "name_zh": "收益预测与监督设计",
+    "description_zh": "从简单基线、标签期限到关系和潜在因子建模。"
   },
   {
     "id": "online-adaptation",
-    "name": "在线学习与市场适应",
-    "description": "研究模型如何应对数据分布漂移和市场状态变化。"
+    "name": "Online Learning & Adaptation",
+    "description": "Concept drift, incremental updates and market regime changes.",
+    "name_zh": "在线学习与市场适应",
+    "description_zh": "研究模型如何应对数据分布漂移和市场状态变化。"
   },
   {
     "id": "portfolio-management",
-    "name": "组合管理与强化学习",
-    "description": "把预测或市场表示转化为仓位和动态组合决策。"
+    "name": "Portfolio Management & RL",
+    "description": "Representations and predictions translated into portfolio decisions.",
+    "name_zh": "组合管理与强化学习",
+    "description_zh": "把预测或市场表示转化为仓位和动态组合决策。"
   },
   {
     "id": "risk-modeling",
-    "name": "风险、协方差与状态估计",
-    "description": "研究波动、协方差、尾部场景与隐藏状态。"
+    "name": "Risk, Covariance & Filtering",
+    "description": "Volatility, covariance, tail scenarios and latent-state estimation.",
+    "name_zh": "风险、协方差与状态估计",
+    "description_zh": "研究波动、协方差、尾部场景与隐藏状态。"
   },
   {
     "id": "asset-pricing",
-    "name": "动量策略与资产定价",
-    "description": "连接端到端策略、测试组合构造与跨市场预测。"
+    "name": "Momentum & Asset Pricing",
+    "description": "End-to-end momentum, test portfolios and international return prediction.",
+    "name_zh": "动量策略与资产定价",
+    "description_zh": "连接端到端策略、测试组合构造与跨市场预测。"
   },
   {
     "id": "microstructure",
-    "name": "微观结构与交易执行",
-    "description": "从盘口信号、领先滞后关系到成交量和执行成本。"
+    "name": "Microstructure & Execution",
+    "description": "Order books, lead-lag relationships, volume and execution costs.",
+    "name_zh": "微观结构与交易执行",
+    "description_zh": "从盘口信号、领先滞后关系到成交量和执行成本。"
   }
 ]

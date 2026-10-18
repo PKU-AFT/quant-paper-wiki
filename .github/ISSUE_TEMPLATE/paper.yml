@@ -1,24 +1,24 @@
-name: 补充论文或纠正链接
-description: 提供论文题录、代码来源或版本修正
-title: "[论文] "
+name: Suggest a paper or correct a source
+description: Add a paper, code link or version correction
+title: "[Paper] "
 body:
   - type: input
     id: title
     attributes:
-      label: 完整论文题目或已有编号
+      label: Full paper title or existing catalog ID
     validations:
       required: true
   - type: input
     id: source
     attributes:
-      label: 原文入口
-      description: 优先提供正式出版页面、arXiv 或作者论文页面。
+      label: Primary source
+      description: Prefer an official publication page, arXiv or an author manuscript.
     validations:
       required: true
   - type: textarea
     id: change
     attributes:
-      label: 推荐理由或修正依据
-      description: 代码请说明作者实现、演示或第三方复现；版本修正请提供依据。
+      label: Reason for inclusion or correction evidence
+      description: Identify author code, demonstrations and third-party implementations explicitly.
     validations:
       required: true

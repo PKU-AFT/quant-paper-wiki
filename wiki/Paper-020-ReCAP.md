@@ -1,33 +1,20 @@
 # 20 · ReCAP
 
-[返回首页](Home.md) · [在线学习与市场适应](Category-online-adaptation.md) · [全部论文](All-Papers.md)
+[Home](Home.md) · [Full index](All-Papers.md)
 
 **Regime-Adaptive Continual Learning for Portfolio Management**
 
-| 项目 | 内容 |
+| Item | Details |
 | --- | --- |
-| 研究方向 | 在线学习与市场适应 |
-| 所链接版本年份 | 2026，以原文页面的版本信息为准 |
-| 原文入口 | [论文页面](https://arxiv.org/abs/2606.00143) |
-| 配套代码 | 尚未核实作者代码入口；不表示没有公开代码 |
-| 首版整理状态 | 题录与原文入口已核对；本页为简要导读 |
-| 独立复现状态 | 未开展 |
-| 最近核对 | 2026-10-18 |
+| Research area | [Online Learning & Adaptation](Category-online-adaptation.md) |
+| Linked version year | 2026 |
+| Paper | [Primary source](https://arxiv.org/abs/2606.00143) |
+| Code | Author code link not yet verified |
+| Method | Detects market regimes and combines stored regime-specific policy vectors through a continually updated gate. |
+| Reading focus | The policy library must not contain future regimes. Measure detection delay, update cost and forgetting. |
+| Experiment idea | Compare against simple rolling training before measuring gains from policy reuse. |
+| Source check | Bibliographic entry and primary link checked |
+| Independent reproduction | Not started |
+| Last source check | 2026-10-18 |
 
-## 研究什么
-
-检测市场状态并保存策略向量，通过门控组合历史策略以持续适应。
-
-## 阅读时关注什么
-
-历史策略库不能包含未来状态；应比较重训成本、状态检测延迟与遗忘。
-
-## 第一个实验可以怎么做
-
-先对比简单滚动训练，再评估策略库复用的增量价值。
-
-这是一项待开展的实验建议。运行前请先确定 [数据与评估协议](Reproduction-Guide.md)；完成后附上代码版本、数据范围、命令和结果。
-
-## 后续阅读记录
-
-当前尚无本仓库独立实验记录。后续笔记应注明原文页码或章节；复现记录应说明完成的是环境检查、方法演示还是论文实验。
+[Experimental protocol](Reproduction-Guide.md) · [Sources & versions](Sources-and-Status.md)

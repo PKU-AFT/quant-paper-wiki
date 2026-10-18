@@ -1,33 +1,20 @@
 # 25 · Deep Inception Networks
 
-[返回首页](Home.md) · [动量策略与资产定价](Category-asset-pricing.md) · [全部论文](All-Papers.md)
+[Home](Home.md) · [Full index](All-Papers.md)
 
 **Deep Inception Networks: A General End-to-End Framework for Multi-asset Quantitative Strategies**
 
-| 项目 | 内容 |
+| Item | Details |
 | --- | --- |
-| 研究方向 | 动量策略与资产定价 |
-| 所链接版本年份 | 2023，以原文页面的版本信息为准 |
-| 原文入口 | [论文页面](https://arxiv.org/abs/2307.05522) |
-| 配套代码 | 尚未核实作者代码入口；不表示没有公开代码 |
-| 首版整理状态 | 题录与原文入口已核对；本页为简要导读 |
-| 独立复现状态 | 未开展 |
-| 最近核对 | 2026-10-18 |
+| Research area | [Momentum & Asset Pricing](Category-asset-pricing.md) |
+| Linked version year | 2023 |
+| Paper | [Primary source](https://arxiv.org/abs/2307.05522) |
+| Code | Author code link not yet verified |
+| Method | Learns temporal and cross-sectional features from returns and directly optimizes portfolio positions for Sharpe ratio. |
+| Reading focus | Check concentration, market exposure, transaction costs and training stability. |
+| Experiment idea | Compare with Deep Momentum Networks, equal weighting and simple momentum on the same asset pool. |
+| Source check | Bibliographic entry and primary link checked |
+| Independent reproduction | Not started |
+| Last source check | 2026-10-18 |
 
-## 研究什么
-
-从收益序列联合学习时序和截面特征，直接输出组合仓位并优化 Sharpe。
-
-## 阅读时关注什么
-
-检查组合集中度、市场暴露、交易成本和训练稳定性。
-
-## 第一个实验可以怎么做
-
-在同一资产池上与 DMN、等权和简单动量策略比较。
-
-这是一项待开展的实验建议。运行前请先确定 [数据与评估协议](Reproduction-Guide.md)；完成后附上代码版本、数据范围、命令和结果。
-
-## 后续阅读记录
-
-当前尚无本仓库独立实验记录。后续笔记应注明原文页码或章节；复现记录应说明完成的是环境检查、方法演示还是论文实验。
+[Experimental protocol](Reproduction-Guide.md) · [Sources & versions](Sources-and-Status.md)

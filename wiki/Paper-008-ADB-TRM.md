@@ -1,33 +1,20 @@
 # 08 · ADB-TRM
 
-[返回首页](Home.md) · [收益预测与监督设计](Category-return-prediction.md) · [全部论文](All-Papers.md)
+[Home](Home.md) · [Full index](All-Papers.md)
 
 **Automatic De-Biased Temporal-Relational Modeling for Stock Investment Recommendation**
 
-| 项目 | 内容 |
+| Item | Details |
 | --- | --- |
-| 研究方向 | 收益预测与监督设计 |
-| 所链接版本年份 | 2024，以原文页面的版本信息为准 |
-| 原文入口 | [论文页面](https://www.ijcai.org/proceedings/2024/221) |
-| 配套代码 | 尚未核实作者代码入口；不表示没有公开代码 |
-| 首版整理状态 | 题录与原文入口已核对；本页为简要导读 |
-| 独立复现状态 | 未开展 |
-| 最近核对 | 2026-10-18 |
+| Research area | [Return Prediction & Supervision](Category-return-prediction.md) |
+| Linked version year | 2024 |
+| Paper | [Primary source](https://www.ijcai.org/proceedings/2024/221) |
+| Code | Author code link not yet verified |
+| Method | Combines meta-learning, adversarial examples and global-local interactions to address temporal and relational bias. |
+| Reading focus | Ablate meta-learning, adversarial training and relational interactions separately to identify their contributions. |
+| Experiment idea | Add one component at a time using fixed data splits and report incremental changes. |
+| Source check | Bibliographic entry and primary link checked |
+| Independent reproduction | Not started |
+| Last source check | 2026-10-18 |
 
-## 研究什么
-
-结合元学习、对抗样本和全局局部交互，缓解时序及关系偏差。
-
-## 阅读时关注什么
-
-组件较多，需分别消融元学习、对抗训练与关系交互。
-
-## 第一个实验可以怎么做
-
-复用同一数据切分，逐个加入组件并记录增量效果。
-
-这是一项待开展的实验建议。运行前请先确定 [数据与评估协议](Reproduction-Guide.md)；完成后附上代码版本、数据范围、命令和结果。
-
-## 后续阅读记录
-
-当前尚无本仓库独立实验记录。后续笔记应注明原文页码或章节；复现记录应说明完成的是环境检查、方法演示还是论文实验。
+[Experimental protocol](Reproduction-Guide.md) · [Sources & versions](Sources-and-Status.md)

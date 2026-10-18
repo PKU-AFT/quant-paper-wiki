@@ -1,57 +1,93 @@
-# 量化研究论文导航
+# Quantitative Finance Paper Wiki
 
-欢迎来到 PKU-AFT 的论文阅读与复现 Wiki。
+**37 papers · 7 research areas · 17 companion code links**
 
-这里从 **37 篇论文**出发，把研究问题、原文入口、配套代码与实验建议放在同一张阅读卡片中。
+[Full index](All-Papers.md) · [Reading paths](Reading-Paths.md) · [Experimental protocol](Reproduction-Guide.md) · [Sources & versions](Sources-and-Status.md)
 
-**[完整目录](All-Papers.md) · [阅读路线](Reading-Paths.md) · [复现规范](Reproduction-Guide.md) · [来源与状态](Sources-and-Status.md)**
+## Research areas
 
-## 选择方向
+| Research area | Papers | Scope |
+| --- | --- | --- |
+| [Factor Mining & Research Agents](Category-alpha-agents.md) | 5 | Hypothesis generation, search allocation and evolutionary research workflows. |
+| [Return Prediction & Supervision](Category-return-prediction.md) | 10 | Simple baselines, label horizons, relational models and latent factors. |
+| [Online Learning & Adaptation](Category-online-adaptation.md) | 4 | Concept drift, incremental updates and market regime changes. |
+| [Portfolio Management & RL](Category-portfolio-management.md) | 3 | Representations and predictions translated into portfolio decisions. |
+| [Risk, Covariance & Filtering](Category-risk-modeling.md) | 6 | Volatility, covariance, tail scenarios and latent-state estimation. |
+| [Momentum & Asset Pricing](Category-asset-pricing.md) | 5 | End-to-end momentum, test portfolios and international return prediction. |
+| [Microstructure & Execution](Category-microstructure.md) | 4 | Order books, lead-lag relationships, volume and execution costs. |
 
-### [因子挖掘与研究 Agent](Category-alpha-agents.md) · 5 篇
+## Paper directory
 
-从假设生成、搜索分配到因子谱系，比较自动化研究流程。
+### Factor Mining & Research Agents
 
-[AlphaAgent](Paper-001-AlphaAgent.md) · [R&D-Agent-Quant](Paper-002-RD-Agent-Quant.md) · [Navigating the Alpha Jungle](Paper-003-Alpha-Jungle.md) · [AlphaPROBE](Paper-004-AlphaPROBE.md) · [QuantaAlpha](Paper-005-QuantaAlpha.md)
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 01 | [AlphaAgent](Paper-001-AlphaAgent.md) | 2025 | Regularizes LLM factor generation through originality, hypothesis alignment and expression complexity constraints. | [Paper](https://arxiv.org/abs/2502.16789) | [Code](https://github.com/RndmVariableQ/AlphaAgent/tree/legacy-main) |
+| 02 | [R&D-Agent-Quant](Paper-002-RD-Agent-Quant.md) | 2025 | Connects research hypotheses, code development and backtest feedback through joint factor and model optimization. | [Paper](https://arxiv.org/abs/2505.15155) | [Code](https://github.com/microsoft/RD-Agent) |
+| 03 | [Navigating the Alpha Jungle](Paper-003-Alpha-Jungle.md) | 2025 | Combines LLM formula proposals with Monte Carlo tree search to allocate factor search effort. | [Paper](https://arxiv.org/abs/2505.11122) | To verify |
+| 04 | [AlphaPROBE](Paper-004-AlphaPROBE.md) | 2026 | Tracks factor evolution in a DAG and uses Bayesian retrieval and ancestor traces to guide generation. | [Paper](https://arxiv.org/abs/2602.11917) | [Code](https://github.com/gta0804/AlphaPROBE) |
+| 05 | [QuantaAlpha](Paper-005-QuantaAlpha.md) | 2026 | Mutates and recombines complete factor research trajectories to reuse useful construction and repair steps. | [Paper](https://arxiv.org/abs/2602.07085) | [Code](https://github.com/QuantaAlpha/QuantaAlpha) |
 
-### [收益预测与监督设计](Category-return-prediction.md) · 10 篇
+### Return Prediction & Supervision
 
-从简单基线、标签期限到关系和潜在因子建模。
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 06 | [Progressive Dependency Representation Learning](Paper-006-PDU.md) | 2025 | Studies progressive dependency representations for stock ranking under uncertain risk. | [Paper](https://doi.org/10.1145/3690624.3709189) | [Code](https://github.com/xieyanzhe/PDU) |
+| 07 | [RSAP-DFM](Paper-007-RSAP-DFM.md) | 2024 | Conditions a dynamic factor model on continuous market regimes and adapts its posterior return mapping. | [Paper](https://www.ijcai.org/proceedings/2024/676) | To verify |
+| 08 | [ADB-TRM](Paper-008-ADB-TRM.md) | 2024 | Combines meta-learning, adversarial examples and global-local interactions to address temporal and relational bias. | [Paper](https://www.ijcai.org/proceedings/2024/221) | To verify |
+| 09 | [FactorVAE](Paper-009-FactorVAE.md) | 2022 | Combines a dynamic factor model with a VAE, using training posteriors to guide predictive priors. | [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/20369) | To verify |
+| 10 | [FactorGCL](Paper-010-FactorGCL.md) | 2025 | Uses hypergraphs and residual contrastive learning to extract signals beyond known factors. | [Paper](https://arxiv.org/abs/2502.05218) | To verify |
+| 12 | [HIST](Paper-012-HIST.md) | 2021 | Separates predefined concepts, hidden concepts and stock-specific information to model shared stock signals. | [Paper](https://arxiv.org/abs/2110.13716) | [Code](https://github.com/Wentao-Xu/HIST) |
+| 13 | [The Label Horizon Paradox](Paper-013-Label-Horizon.md) | 2026 | Studies how training label horizons and their weights affect performance at a fixed prediction horizon. | [Paper](https://arxiv.org/abs/2602.03395) | [Code](https://github.com/EFundAI/label-horizon-paradox) |
+| 15 | [StockMixer](Paper-015-StockMixer.md) | 2024 | Mixes indicators, time and stocks with MLPs to provide a relatively simple forecasting architecture. | [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/28681) | [Code](https://github.com/SJTU-DMTai/StockMixer) |
+| 16 | [RAVEN](Paper-016-RAVEN.md) | 2026 | Uses regime-aware experts to adapt the historical context length for each sample. | [Paper](https://arxiv.org/abs/2606.24062) | To verify |
+| 23 | [Multi-task RNN + Higher-order MRF](Paper-023-RNN-MRF.md) | 2019 | Combines multi-task recurrent networks and higher-order MRFs to model stock-group movement dependencies. | [Paper](https://doi.org/10.1145/3292500.3330983) | To verify |
 
-[Progressive Dependency Representation Learning](Paper-006-PDU.md) · [RSAP-DFM](Paper-007-RSAP-DFM.md) · [ADB-TRM](Paper-008-ADB-TRM.md) · [FactorVAE](Paper-009-FactorVAE.md) · [FactorGCL](Paper-010-FactorGCL.md) · [HIST](Paper-012-HIST.md) · [The Label Horizon Paradox](Paper-013-Label-Horizon.md) · [StockMixer](Paper-015-StockMixer.md) · [RAVEN](Paper-016-RAVEN.md) · [Multi-task RNN + Higher-order MRF](Paper-023-RNN-MRF.md)
+### Online Learning & Adaptation
 
-### [在线学习与市场适应](Category-online-adaptation.md) · 4 篇
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 17 | [DoubleAdapt](Paper-017-DoubleAdapt.md) | 2023 | Uses meta-learning to adapt both input distributions and model parameters during incremental stock forecasting. | [Paper](https://arxiv.org/abs/2306.09862) | [Code](https://github.com/SJTU-DMTai/DoubleAdapt) |
+| 18 | [DDG-DA](Paper-018-DDG-DA.md) | 2022 | Forecasts distribution changes and adjusts training distributions to address predictable concept drift. | [Paper](https://arxiv.org/abs/2201.04038) | To verify |
+| 19 | [Fast and Slow Streams / DSOF](Paper-019-DSOF.md) | 2025 | Combines fast adaptation and slow memory streams while formalizing online forecasting without information leakage. | [Paper](https://proceedings.iclr.cc/paper_files/paper/2025/hash/46e624c244cff669223d488defd4e835-Abstract-Conference.html) | [Code](https://github.com/yyalau/iclr2025_dsof) |
+| 20 | [ReCAP](Paper-020-ReCAP.md) | 2026 | Detects market regimes and combines stored regime-specific policy vectors through a continually updated gate. | [Paper](https://arxiv.org/abs/2606.00143) | To verify |
 
-研究模型如何应对数据分布漂移和市场状态变化。
+### Portfolio Management & RL
 
-[DoubleAdapt](Paper-017-DoubleAdapt.md) · [DDG-DA](Paper-018-DDG-DA.md) · [Fast and Slow Streams / DSOF](Paper-019-DSOF.md) · [ReCAP](Paper-020-ReCAP.md)
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 14 | [ArchetypeTrader](Paper-014-ArchetypeTrader.md) | 2026 | Learns strategic archetypes from demonstration trajectories, then selects and refines actions with reinforcement learning. | [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/40166) | To verify |
+| 22 | [EarnMore](Paper-022-EarnMore.md) | 2023 | Uses maskable stock representations so one reinforcement learning model can serve different stock pools. | [Paper](https://arxiv.org/abs/2311.10801) | To verify |
+| 24 | [MILLION](Paper-024-MILLION.md) | 2024 | Combines return prediction, ranking and portfolio objectives with a separate risk-control adjustment. | [Paper](https://arxiv.org/abs/2412.03038) | To verify |
 
-### [组合管理与强化学习](Category-portfolio-management.md) · 3 篇
+### Risk, Covariance & Filtering
 
-把预测或市场表示转化为仓位和动态组合决策。
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 21 | [Deep Risk Model](Paper-021-Deep-Risk-Model.md) | 2021 | Learns latent risk factors to improve stock return covariance estimation. | [Paper](https://arxiv.org/abs/2107.05201) | [Code](https://github.com/linhx25/DeepRiskModel) |
+| 29 | [Tail-GAN](Paper-029-Tail-GAN.md) | 2022 | Trains a scenario generator around joint VaR and ES scores to preserve portfolio tail-risk properties. | [Paper](https://arxiv.org/abs/2203.01664) | [Code](https://github.com/chaozhang-ox/Tail-GAN) |
+| 30 | [Graph-based HAR](Paper-030-Graph-HAR.md) | 2025 | Adds graph-neighbor information to HAR forecasts of volatility and correlation, then constructs covariance forecasts. | [Paper](https://academic.oup.com/jfec/article/23/2/nbae026/7889003) | [Code](https://github.com/chaozhang-ox/Graph-based-HAR) |
+| 31 | [GNNHAR](Paper-031-GNNHAR.md) | 2025 | Uses graph neural networks to model volatility spillovers and compares losses and neighborhood depths. | [Paper](https://www.sciencedirect.com/science/article/pii/S0169207024000967) | [Code](https://github.com/chaozhang-ox/GNNHAR) |
+| 32 | [Intraday Commonality](Paper-032-Intraday-Commonality.md) | 2022 | Pools intraday volatility information across stocks and incorporates a market volatility proxy. | [Paper](https://arxiv.org/abs/2202.08962) | [Code](https://github.com/chaozhang-ox/IntradayVoltility) |
+| 35 | [Deep Kalman Filters Can Filter](Paper-035-Deep-Kalman-Filters.md) | 2023 | Studies the theoretical ability of continuous-time deep filters to approximate conditional distributions. | [Paper](https://arxiv.org/abs/2310.19603v1) | To verify |
 
-[ArchetypeTrader](Paper-014-ArchetypeTrader.md) · [EarnMore](Paper-022-EarnMore.md) · [MILLION](Paper-024-MILLION.md)
+### Momentum & Asset Pricing
 
-### [风险、协方差与状态估计](Category-risk-modeling.md) · 6 篇
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 25 | [Deep Inception Networks](Paper-025-DIN.md) | 2023 | Learns temporal and cross-sectional features from returns and directly optimizes portfolio positions for Sharpe ratio. | [Paper](https://arxiv.org/abs/2307.05522) | To verify |
+| 26 | [Spatio-Temporal Momentum](Paper-026-Spatio-Temporal-Momentum.md) | 2023 | Jointly learns time-series and cross-sectional momentum signals for portfolio trading. | [Paper](https://arxiv.org/abs/2302.10175) | To verify |
+| 27 | [Forest through the Trees](Paper-027-Forest-through-Trees.md) | 2019 | Builds characteristic-based tree partitions and test portfolios for asset-pricing analysis. | [Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3493458) | To verify |
+| 28 | [Alpha Go Everywhere](Paper-028-Alpha-Go-Everywhere.md) | 2025 | Studies international stock return prediction using local and US firm characteristics. | [Paper](https://doi.org/10.1093/rapstu/raaf005) | [Code](https://github.com/chaozhang-ox/AlphaGoEverywhere) |
+| 37 | [Deep Momentum Networks](Paper-037-Deep-Momentum.md) | 2019 | Jointly learns trend signals and position sizing within volatility scaling, with turnover-aware objectives. | [Paper](https://arxiv.org/abs/1904.04912) | To verify |
 
-研究波动、协方差、尾部场景与隐藏状态。
+### Microstructure & Execution
 
-[Deep Risk Model](Paper-021-Deep-Risk-Model.md) · [Tail-GAN](Paper-029-Tail-GAN.md) · [Graph-based HAR](Paper-030-Graph-HAR.md) · [GNNHAR](Paper-031-GNNHAR.md) · [Intraday Commonality](Paper-032-Intraday-Commonality.md) · [Deep Kalman Filters Can Filter](Paper-035-Deep-Kalman-Filters.md)
+| ID | Paper & notes | Year¹ | Research focus | Paper | Code |
+| --- | --- | --- | --- | --- | --- |
+| 11 | [DeepLOB](Paper-011-DeepLOB.md) | 2018 | Uses convolutions for order-book structure and an LSTM for temporal dependencies in short-horizon prediction. | [Paper](https://arxiv.org/abs/1808.03668) | [Code](https://github.com/zcakhaa/DeepLOB-Deep-Convolutional-Neural-Networks-for-Limit-Order-Books) |
+| 33 | [Cross-Impact of OFI](Paper-033-OFI-Cross-Impact.md) | 2021 | Combines multi-level order-flow imbalance and separates own impact, contemporaneous cross-impact and lagged prediction. | [Paper](https://arxiv.org/abs/2112.13213) | To verify |
+| 34 | [Detecting Lead-Lag Relationships](Paper-034-Lead-Lag.md) | 2023 | Detects lead-lag relationships in stock returns and evaluates their economic relevance through portfolios. | [Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4599565) | To verify |
+| 36 | [Trading Volume Alpha](Paper-036-Trading-Volume-Alpha.md) | 2024 | Turns trading volume forecasts into cost-aware rebalancing decisions and evaluates net portfolio performance. | [Paper](https://www.nber.org/papers/w33037) | To verify |
 
-### [动量策略与资产定价](Category-asset-pricing.md) · 5 篇
-
-连接端到端策略、测试组合构造与跨市场预测。
-
-[Deep Inception Networks](Paper-025-DIN.md) · [Spatio-Temporal Momentum](Paper-026-Spatio-Temporal-Momentum.md) · [Forest through the Trees](Paper-027-Forest-through-Trees.md) · [Alpha Go Everywhere](Paper-028-Alpha-Go-Everywhere.md) · [Deep Momentum Networks](Paper-037-Deep-Momentum.md)
-
-### [微观结构与交易执行](Category-microstructure.md) · 4 篇
-
-从盘口信号、领先滞后关系到成交量和执行成本。
-
-[DeepLOB](Paper-011-DeepLOB.md) · [Cross-Impact of OFI](Paper-033-OFI-Cross-Impact.md) · [Detecting Lead-Lag Relationships](Paper-034-Lead-Lag.md) · [Trading Volume Alpha](Paper-036-Trading-Volume-Alpha.md)
-
-## 推荐起点
-
-先读 StockMixer 与 Label Horizon，建立统一基线和标签口径；随后用 DoubleAdapt 研究市场适应，再根据数据条件选择 Agent、风险预测或盘口执行方向。完整顺序与阶段产出见 [阅读路线](Reading-Paths.md)。
-
-当前仅完成导航与初步导读整理，所有独立复现实验均为“未开展”。
+¹ Years refer to the linked preprint or publication version; see [Sources & versions](Sources-and-Status.md).

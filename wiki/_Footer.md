@@ -1,1 +1,1 @@
-PKU-AFT · 量化研究论文导航 · [仓库与贡献](https://github.com/PKU-AFT/quant-paper-wiki) · [来源与状态](Sources-and-Status.md)
+PKU-AFT · Quantitative Finance Paper Wiki · [Repository](https://github.com/PKU-AFT/quant-paper-wiki) · [Sources & versions](Sources-and-Status.md)
